@@ -25,7 +25,7 @@
 function creation (){
     this.newVariable = 'i am born'
 }
-creation()
+creation() 
 console.log(newVariable);
 
 
@@ -52,20 +52,30 @@ anotherGreet()
 // in  below when this keyword is used inside a function and this function is also inside an object then this keyword is not pointing window object it is pointing the object in which it is sitting.
 
 
-const method = {
-    name : "amit",
-    age : 44,
-    log : function anotherChild(){
+// const method = {
+//     name : "amit",
+//     age : 44,
+//     log : function (){
+//         console.log(this);
+//     }
+// }
+
+// it is become a method.
+// method.log()
+
+
+
+
+// level -6 ----#####
+
+// if go nested ( adding function inside object and adding another function inside this function) in the above method then this keyword is not pointing the object inwhich it is placed, it is pointing window object, it is a bug or i don't know why it is doing that.
+
+//  so in order to make this keyword pointing to the object we pass this keyword into a varaible so this variable is pointing the address of this and we can do what ever we want with this variable b/c it is pointing the this keyword.
+
+const anotherMethod = {
+    name : 'this is anotherMethod name',
+    age : 22,
+    log : function (){
         console.log(this);
     }
 }
-
-method.log()
-
-
-
-// level -6
-
-// if go nested in the above method then this keyword is not pointing the object inwhich it is placed, it is pointing window object, it is a bug or i don't know why it is doing that.
-
-//  so in order to make this keyword pointing to the  
